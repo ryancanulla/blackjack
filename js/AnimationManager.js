@@ -36,10 +36,12 @@ blackjack.AnimationsManager.prototype.manWin = function(){
         index = Math.round((length - 1) * Math.random()),
         animation = list.splice(index, 1);
 
+
     if(!animation) {
         console.log('no animations left: ' + length);
         return 'null';
     }
+
     return animation[0];
 };
 
@@ -106,6 +108,7 @@ blackjack.AnimationsManager.prototype.getAnimation = function(list, level){
             console.log('animationLevel:' + animation.level);
             console.log('url:'+ animation.url);
             console.log('');
+            animation.targetScale = this.animationList.targetScale;
             return animation;
         }
     }
@@ -118,6 +121,7 @@ blackjack.AnimationsManager.prototype.getAnimation = function(list, level){
         console.log('');
         return {time:1000};
     }
+
     return animation;
 };
 

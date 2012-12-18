@@ -51,9 +51,6 @@ blackjack.AnimationScreen.prototype.createChildren = function(){
     this.winContainer = new lime.Sprite();
     this.loseContainer = new lime.Sprite();
 
-    this.winContainer.setScale(3);
-    this.loseContainer.setScale(3);
-
     this.appendChild(background);
 
     this.appendChild(this.winContainer);
@@ -77,6 +74,9 @@ blackjack.AnimationScreen.prototype.setupNextAnimation = function(gender, level)
         this.loseDetails = this.animationManager.womanTauntsUser(level)
         this.winDetails = this.animationManager.womanLosesItem(level);
     }
+
+    this.winContainer.setScale(this.winDetails.targetScale);
+    this.loseContainer.setScale(this.winDetails.targetScale);
 
     this.winContainer.setFill(this.winDetails.url + '?=' + (Math.round(Math.random() * 1000)).toString());
 
