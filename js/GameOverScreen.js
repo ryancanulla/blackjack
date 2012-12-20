@@ -14,14 +14,14 @@ blackjack.GameOverScreen = function(win, gender){
     this.topLabel = new lime.Label();
     this.topLabel.setFontSize(60);
     this.topLabel.setFontColor('#ffffff');
-    this.topLabel.setFontFamily('Gotham');
+    this.topLabel.setFontFamily('GothamBold');
     this.topLabel.setFontWeight('bold');
     this.topLabel.setSize(800, 0);
 
     this.bottomLabel = new lime.Label();
     this.bottomLabel.setFontSize(47);
     this.bottomLabel.setFontColor('#ffffff');
-    this.bottomLabel.setFontFamily('Arial');
+    this.bottomLabel.setFontFamily('GothamBold');
     this.bottomLabel.setFontWeight('bold');
     this.bottomLabel.setSize(800, 0);
 
