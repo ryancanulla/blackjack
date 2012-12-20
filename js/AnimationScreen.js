@@ -117,7 +117,12 @@ blackjack.AnimationScreen.prototype.start = function(gender, action, level) {
 blackjack.AnimationScreen.prototype.updateAnimationPosition = function(gender, level) {
     if(blackjack.ORIENTATION === blackjack.LANDSCAPE) {
         if(gender === blackjack.MAN) {
-            if(level > 4) {
+        	if (level == 2) {
+	        	this.winContainer.setPosition(750, 384);
+	        }
+	        else if (level == 1) {
+	        	this.loseContainer.setPosition(750, 384);
+        	} else if(level > 4) {
                 this.winContainer.setPosition(675 , 395);
                 this.loseContainer.setPosition(675 , 395);
             }

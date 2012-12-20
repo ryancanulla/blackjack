@@ -1,5 +1,5 @@
 {
-    "targetScale":3,
+    "targetScale":2.05,
     "man":{
         "intro":[
          
@@ -11,27 +11,27 @@
 
         "win":[
             {
-                "url":"assets/game/animation/man/win/maleWin1_3500.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin1_3500.gif",
                 "time":4500,
                 "level":1
             },
             {
-                "url":"assets/game/animation/man/win/maleWin2_3000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin2_3000.gif",
                 "time":4000,
                 "level":2
             },
             {
-                "url":"assets/game/animation/man/win/maleWin3_4000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin3_4000.gif",
                 "time":5000,
                 "level":3
             },
             {
-                "url":"assets/game/animation/man/win/maleWin4_4000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin4_4000.gif",
                 "time":5000,
                 "level":4
             },
             {
-                "url":"assets/game/animation/man/win/maleWin5_4000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin5_4000.gif",
                 "time":5000,
                 "level":5
             },
@@ -41,22 +41,22 @@
                 "level":6
             },
             {
-                "url":"assets/game/animation/man/win/maleWin7_2000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin7_2000.gif",
                 "time":3000,
                 "level":7
             },
             {
-                "url":"assets/game/animation/man/win/maleWin8_2000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin8_2000.gif",
                 "time":3000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/man/win/maleWin9_4000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin9_4000.gif",
                 "time":5000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/man/win/maleWin10_6000.gif",
+                "url":"assets/game/animation/man-hd/win/maleWin10_6000.gif",
                 "time":7000,
                 "level":10
             }
@@ -64,127 +64,127 @@
         ],
         "lose":[
             {
-                "url":"assets/game/animation/man/lose/maleLose1_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose1_2000.gif",
                 "time":3000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose1_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose1_3000.gif",
                 "time":4000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose1_4000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose1_4000.gif",
                 "time":5000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose2_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose2_2000.gif",
                 "time":3000,
                 "level":2
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose2_2500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose2_2500.gif",
                 "time":3500,
                 "level":2
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose2_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose2_3000.gif",
                 "time":4000,
                 "level":2
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose3_1000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose3_1000.gif",
                 "time":2000,
                 "level":3
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose3_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose3_2000.gif",
                 "time":3000,
                 "level":3
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose4_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose4_2000.gif",
                 "time":3000,
                 "level":4
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose4_4000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose4_4000.gif",
                 "time":5000,
                 "level":4
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose5_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose5_3000.gif",
                 "time":4000,
                 "level":5
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose5_4000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose5_4000.gif",
                 "time":5000,
                 "level":5
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose6_1500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose6_1500.gif",
                 "time":2500,
                 "level":6
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose6_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose6_2000.gif",
                 "time":3000,
                 "level":6
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose6_2500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose6_2500.gif",
                 "time":3500,
                 "level":6
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose7_2500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose7_2500.gif",
                 "time":3500,
                 "level":7
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose7_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose7_3000.gif",
                 "time":4000,
                 "level":7
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose7_3500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose7_3500.gif",
                 "time":4500,
                 "level":7
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose8_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose8_2000.gif",
                 "time":3000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose8_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose8_3000.gif",
                 "time":4000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose9_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose9_3000.gif",
                 "time":4000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose9_4500.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose9_4500.gif",
                 "time":4500,
                 "level":9
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose10_2000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose10_2000.gif",
                 "time":3000,
                 "level":10
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose10_3000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose10_3000.gif",
                 "time":4000,
                 "level":10
             },
             {
-                "url":"assets/game/animation/man/lose/maleLose10_4000.gif",
+                "url":"assets/game/animation/man-hd/lose/maleLose10_4000.gif",
                 "time":5000,
                 "level":10
             }
@@ -196,210 +196,210 @@
         "intro":[
          
             {
-                "url":"assets/game/animation/female/intro/femaleIntro_4000.gif",
+                "url":"assets/game/animation/woman-hd/intro/femaleIntro_4000.gif",
                 "time":4500
             }
         ],
         "win":[
             {
-                "url":"assets/game/animation/female/win/femaleWin1_2000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin1_2000.gif",
                 "time":3000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin2_3000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin2_3000.gif",
                 "time":4000,
                 "level":2
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin3_2000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin3_2000.gif",
                 "time":3000,
                 "level":3
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin4_1000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin4_1000.gif",
                 "time":2000,
                 "level":4
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin5_4000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin5_4000.gif",
                 "time":5000,
                 "level":5
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin6_3000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin6_3000.gif",
                 "time":4000,
                 "level":6
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin7_2000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin7_2000.gif",
                 "time":3000,
                 "level":7
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin8_4000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin8_4000.gif",
                 "time":5000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin9_3000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin9_3000.gif",
                 "time":4000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/female/win/femaleWin10_4000.gif",
+                "url":"assets/game/animation/woman-hd/win/femaleWin10_4000.gif",
                 "time":5000,
                 "level":10
             }
         ],
         "lose":[
             {
-                "url":"assets/game/animation/female/lose/femaleLose1_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose1_2000.gif",
                 "time":3000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose1_3000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose1_3000.gif",
                 "time":4000,
                 "level":1
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose1_3500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose1_3500.gif",
                 "time":4500,
                 "level":1
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose2_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose2_2000.gif",
                 "time":3000,
                 "level":2
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose2_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose2_2500.gif",
                 "time":3500,
                 "level":2
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose3_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose3_2000.gif",
                 "time":3000,
                 "level":3
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose3_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose3_2500.gif",
                 "time":3500,
                 "level":3
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose4_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose4_2000.gif",
                 "time":3000,
                 "level":4
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose4_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose4_2500.gif",
                 "time":3500,
                 "level":4
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose5_3000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose5_3000.gif",
                 "time":4000,
                 "level":5
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose5_3500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose5_3500.gif",
                 "time":4500,
                 "level":5
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose6_1000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose6_1000.gif",
                 "time":2000,
                 "level":6
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose6_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose6_2000.gif",
                 "time":3000,
                 "level":6
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose6_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose6_2500.gif",
                 "time":3500,
                 "level":6
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose6_4000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose6_4000.gif",
                 "time":5000,
                 "level":6
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose7_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose7_2000.gif",
                 "time":3000,
                 "level":7
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose7_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose7_2500.gif",
                 "time":3500,
                 "level":7
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose7_3000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose7_3000.gif",
                 "time":4000,
                 "level":7
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose8_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose8_2000.gif",
                 "time":3000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose8_3000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose8_3000.gif",
                 "time":4000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose8_3500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose8_3500.gif",
                 "time":4500,
                 "level":8
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose8_4000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose8_4000.gif",
                 "time":5000,
                 "level":8
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose9_1000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose9_1000.gif",
                 "time":2000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose9_2000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose9_2000.gif",
                 "time":3000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose9_2500.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose9_2500.gif",
                 "time":3500,
                 "level":9
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose9_3000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose9_3000.gif",
                 "time":4000,
                 "level":9
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose10_1000.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose10_1000.gif",
                 "time":2000,
                 "level":10
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose10_2200.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose10_2200.gif",
                 "time":3200,
                 "level":10
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose10_2400.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose10_2400.gif",
                 "time":3400,
                 "level":10
             },
             {
-                "url":"assets/game/animation/female/lose/femaleLose10_2600.gif",
+                "url":"assets/game/animation/woman-hd/lose/femaleLose10_2600.gif",
                 "time":3600,
                 "level":10
             }
