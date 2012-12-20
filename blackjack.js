@@ -113,7 +113,7 @@ blackjack.setup = function(){
     lime.Label.installFont('HungerGames', 'assets/fonts/HungerGames.ttf');
 
     lime.Label.installFont('Gotham', 'assets/fonts/GOTHAM-U.ttf');
-    lime.Label.installFont('GothamBold', 'assets/fonts/GOTHAM-BOLD.ttf');
+    lime.Label.installFont('GothamBold', 'assets/fonts/GOTHAM-BOLD.TTF');
     lime.Label.installFont('Rock', 'assets/fonts/ROCKWESB.ttf');
 
     goog.net.XhrIo.send('assets/gameOver/gameOverConfig.json', function(e) {
