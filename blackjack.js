@@ -67,6 +67,9 @@ blackjack.ANIMATION_COMPLETE = 'animationComplete';
 blackjack.COMPUTER_LOSES_ITEM = 'manLosesItem';
 blackjack.COMPUTER_TAUNTS = 'manTaunts';
 
+blackjack.WIN = true;
+blackjack.LOSE = false;
+
 blackjack.PLAY_SOUND = true;
 blackjack.CLICK_SOUND = 'click';
 blackjack.SHUFFEL_SOUND = 'shuffle';
@@ -177,7 +180,6 @@ blackjack.showPreloader = function(){
     goog.events.listen(preloadScene, 'complete', function() {
         blackjack.playSound(blackjack.BACKGROUND_SOUND);
         blackjack.goToMenuScene();
-//        blackjack.goToGameOverScreen(false);
     }, false, this);
 };
 

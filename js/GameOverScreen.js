@@ -11,37 +11,36 @@ blackjack.GameOverScreen = function(win, gender){
     background.setAnchorPoint(0,0);
     background.setSize(blackjack.WIDTH, blackjack.HEIGHT);
 
-    this.playAgainButton = new blackjack.Button('assets/gameOver/playAgainButton.png', 'assets/gameOver/playAgainButtonDown.png');
-    this.playAgainButton.setAnchorPoint(.5,.5);
+    this.topLabel = new lime.Label();
+    this.topLabel.setFontSize(80);
+    this.topLabel.setFontColor('#ffffff');
+    this.topLabel.setFontFamily('Arial');
+    this.topLabel.setFontWeight('bold');
+    this.topLabel.setSize(800, 0);
 
-    this.messageLabel = new lime.Label();
-    this.messageLabel.setFontSize(60);
-//    this.messageLabel.setAnchorPoint(.5, .5);
-    this.messageLabel.setFontColor('#ffffff');
-    this.messageLabel.setFontFamily('Gotham');
-
-    this.messageLabel.setSize(800, 0);
+    this.bottomLabel = new lime.Label();
+    this.bottomLabel.setFontSize(57);
+    this.bottomLabel.setFontColor('#ffffff');
+    this.bottomLabel.setFontFamily('Arial');
+    this.bottomLabel.setFontWeight('bold');
+    this.bottomLabel.setSize(800, 0);
 
     if(blackjack.ORIENTATION == blackjack.LANDSCAPE) {
         background.setFill('assets/gameOver/endScreenLandscape.png');
-        this.playAgainButton.setPosition(blackjack.WIDTH * .5, blackjack.HEIGHT * .55);
-        this.playAgainButton.setScale(2);
-        this.messageLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 345);
-
+        this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 355);
+        this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 260);
         this.setMessage(win, gender);
     }
     else {
         background.setFill('assets/gameOver/endScreen.png');
-        this.playAgainButton.setPosition(blackjack.WIDTH * .5, blackjack.HEIGHT *.55);
-        this.playAgainButton.setScale(1.5);
-        this.messageLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 450);
-
+        this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 450);
+        this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 345)
         this.setMessage(win, gender);
     }
 
     this.appendChild(background);
-    this.appendChild(this.messageLabel)
-    this.appendChild(this.playAgainButton);
+    this.appendChild(this.topLabel);
+    this.appendChild(this.bottomLabel);
 };
 
 goog.inherits(blackjack.GameOverScreen, blackjack.utils.ViewportMonitor);
@@ -52,24 +51,26 @@ blackjack.GameOverScreen.prototype.setMessage = function(win, gender){
 
         if(gender === blackjack.MAN) {
             index = Math.round((this.messages.win.male.length - 1) * Math.random());
-            this.messageLabel.setText(this.messages.win.male[index].text);
+            this.topLabel.setText('YOU WIN!');
+            this.bottomLabel.setText(this.messages.win.male[index].text);
         }
         else {
             index = Math.round((this.messages.win.female.length - 1) * Math.random());
-            this.messageLabel.setText(this.messages.win.female[index].text);
+            this.topLabel.setText('YOU WIN!');
+            this.bottomLabel.setText(this.messages.win.female[index].text);
         }
 
     }
     else {
-
-
         if(gender === blackjack.MAN) {
             index = Math.round((this.messages.lose.male.length - 1) * Math.random());
-            this.messageLabel.setText(this.messages.lose.male[index].text);
+            this.topLabel.setText('LOSER!');
+            this.bottomLabel.setText(this.messages.lose.male[index].text);
         }
         else {
             index = Math.round((this.messages.lose.female.length - 1) * Math.random());
-            this.messageLabel.setText(this.messages.lose.female[index].text);
+            this.topLabel.setText('LOSER!');
+            this.bottomLabel.setText(this.messages.lose.female[index].text);
         }
 
     }
@@ -79,26 +80,26 @@ blackjack.GameOverScreen.prototype.createMessages = function(){
         this.messages = {
             win: {
                 male:[
-                    {text:"Nothing for the man. Everything for you. That's what we're talking about."},
-                    {text:"You: 1. The Man: Nothing!"},
-                    {text:"WINNER! You stripped The Man of his stuff. He's gonna be mad."}
+                    {text:"NOTHING FOR THE MAN. EVERYTHING FOR YOU."},
+                    {text:"YOU: 1. THE MAN: NOTHING!"},
+                    {text:"YOU STRIPPED HIM. HE'S GONNA BE MAD."}
                 ],
                 female:[
-                    {text:"You took it all! Even her pride."},
-                    {text:"Better watch out. The (wo)Man is going to come looking for you."},
-                    {text:"She isn't looking so smug now."}
+                    {text:"YOU TOOK IT ALL! EVEN HER PRIDE."},
+                    {text:"WATCH OUT. SHE'S GONNA BE LOOKING FOR YOU."},
+                    {text:"SOMEONE AIN'T SO SMUG NOW."}
                 ]
             },
             lose:{
                 male:[
-                    {text:"L-o-o--o-o-s-e-r! Better try again."},
-                    {text:"You got whipped. The man is game to go again. Are you?"},
-                    {text:"Guess the man still owns you."}
+                    {text:"GUESS THE MAN STILL OWNS YOU."},
+                    {text:"YOU GOT WHIPPED. WANNA TRY AGAIN?"},
+                    {text:"THAT WAS WEAK. TRY AGAIN."}
                 ],
                 female:[
-                    {text:"Ouch. That must have hurt 'cause you got crushed!"},
-                    {text:"Hope none of your friends saw you lose to a girl."},
-                    {text:"You got pwned!"}
+                    {text:"THAT MUST HAVE HURT 'CAUSE YOU GOT CRUSHED."},
+                    {text:"HOPE NO BROS SAW YOU LOSE TO A GIRL."},
+                    {text:"YOU GOT PWNED."}
                 ]
             }
         };
