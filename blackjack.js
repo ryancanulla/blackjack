@@ -114,6 +114,12 @@ blackjack.setup = function(){
 
     lime.Label.installFont('Gotham', 'assets/fonts/GOTHAM-U.ttf');
     lime.Label.installFont('Rock', 'assets/fonts/ROCKWESB.ttf');
+
+    goog.net.XhrIo.send('assets/gameOver/gameOverConfig.json', function(e) {
+        var xhr = e.target;
+        var obj = xhr.getResponseJson();
+        blackjack.gameOverConfig = obj;
+    });
 };
 
 
