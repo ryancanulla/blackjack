@@ -38,7 +38,6 @@ blackjack.AnimationsManager.prototype.manWin = function(){
 
 
     if(!animation) {
-        console.log('no animations left: ' + length);
         return 'null';
     }
 
@@ -58,9 +57,7 @@ blackjack.AnimationsManager.prototype.womanTauntsUser = function(level){
         return this.getAnimation(this.animationList.woman.lose, level);
     }
     else {
-        console.log('');
-        console.log('animation list undefined');
-        console.log('');
+
     }
 };
 
@@ -101,24 +98,12 @@ blackjack.AnimationsManager.prototype.getAnimation = function(list, level){
         if(item.level === level){
 //            animation = list.splice(i,1)[0];
             animation = list[i];
-
-            console.log('');
-            console.log('getting animation');
-            console.log('gameLevel:' + level);
-            console.log('animationLevel:' + animation.level);
-            console.log('url:'+ animation.url);
-            console.log('');
             animation.targetScale = this.animationList.targetScale;
             return animation;
         }
     }
 
     if(!animation) {
-        console.log('');
-        console.log('getting animation');
-        console.log('no animations left for level:' + level);
-        console.log('list of levels:' + list);
-        console.log('');
         return {time:1000};
     }
 
@@ -145,15 +130,11 @@ blackjack.AnimationsManager.prototype.hasTauntForLevel = function(level, gender)
             hasAnimation = true
         }
     }
-
-    console.log('hasTaunt:  '+ hasAnimation)
     return hasAnimation;
 };
 
 
 blackjack.AnimationsManager.prototype.loadManImages = function(){
-    console.log('load man images');
-
     lime.scheduleManager.callAfter(function(dt){
         this.loadImages(this.animationList.man.win, 1);
         this.loadImages(this.animationList.man.lose, 1);
@@ -164,8 +145,6 @@ blackjack.AnimationsManager.prototype.loadManImages = function(){
 };
 
 blackjack.AnimationsManager.prototype.loadWomanImages = function(){
-    console.log('load man images');
-
     lime.scheduleManager.callAfter(function(dt){
         this.loadImages(this.animationList.woman.win, 1);
         this.loadImages(this.animationList.woman.lose, 1);

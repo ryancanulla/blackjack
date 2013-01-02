@@ -140,7 +140,6 @@ blackjack.Preload.prototype.loadImage = function() {
 
     for(var i=0; i<images.length; i+=1) {
         image = images[i];
-        console.log('preloading image: ' + image.url);
         imageLoader.addImage(i, image.url);
     }
     imageLoader.start();

@@ -1,5 +1,5 @@
 goog.provide('blackjack.GameOverScreen');
-goog.require('blackjack.Button');
+
 goog.require('blackjack.utils.ViewportMonitor');
 
 blackjack.GameOverScreen = function(win, gender){
@@ -44,25 +44,25 @@ blackjack.GameOverScreen = function(win, gender){
 
     lime.scheduleManager.callAfter(function(dt){
 
-    }, this, 3000);
+    }, this, 6000);
 };
 
 goog.inherits(blackjack.GameOverScreen, blackjack.utils.ViewportMonitor);
 
 blackjack.GameOverScreen.prototype.setMessage = function(win, gender){
-    var index;
+    var index,
+        message;
     if(win) {
 
         if(gender === blackjack.MAN) {
             index = Math.round((this.messages.win.male.length - 1) * Math.random());
             this.topLabel.setText('YOU WIN!');
-            this.bottomLabel.setText(this.messages.win.male[index].text);
-
+            this.bottomLabel.setText(this.messages.win.male.splice(index,1)[0].text);
         }
         else {
             index = Math.round((this.messages.win.female.length - 1) * Math.random());
             this.topLabel.setText('YOU WIN!');
-            this.bottomLabel.setText(this.messages.win.female[index].text);
+            this.bottomLabel.setText(this.messages.win.female.splice(index,1)[0].text);
         }
 
     }
@@ -70,12 +70,12 @@ blackjack.GameOverScreen.prototype.setMessage = function(win, gender){
         if(gender === blackjack.MAN) {
             index = Math.round((this.messages.lose.male.length - 1) * Math.random());
             this.topLabel.setText('LOSER!');
-            this.bottomLabel.setText(this.messages.lose.male[index].text);
+            this.bottomLabel.setText(this.messages.lose.male.splice(index,1)[0].text);
         }
         else {
             index = Math.round((this.messages.lose.female.length - 1) * Math.random());
             this.topLabel.setText('LOSER!');
-            this.bottomLabel.setText(this.messages.lose.female[index].text);
+            this.bottomLabel.setText(this.messages.lose.female.splice(index,1)[0].text);
         }
 
     }

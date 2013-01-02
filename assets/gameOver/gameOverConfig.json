@@ -1,50 +1,26 @@
 {
     "win":{
         "male":[
-            {
-                "text":"NOTHING FOR THE MAN. EVERYTHING FOR YOU."
-            },
-            {
-                "text":"YOU: 1. THE MAN: NOTHING!"
-            },
-            {
-                "text":"YOU STRIPPED HIM. HE'S GONNA BE MAD."
-            }
+            {"text":"NOTHING FOR THE MAN. EVERYTHING FOR YOU."},
+            {"text":"YOU: 1. THE MAN: NOTHING!"},
+            {"text":"YOU STRIPPED HIM. HE'S GONNA BE MAD."}
         ],
         "female":[
-            {
-                "text":"YOU TOOK IT ALL! EVEN HER PRIDE."
-            },
-            {
-                "text":"WATCH OUT. SHE'S GONNA BE LOOKING FOR YOU."
-            },
-            {
-                "text":"SOMEONE AIN'T SO SMUG NOW."
-            }
+            {"text":"YOU TOOK IT ALL! EVEN HER PRIDE."},
+            {"text":"WATCH OUT. SHE'S GONNA BE LOOKING FOR YOU."},
+            {"text":"SOMEONE AIN'T SO SMUG NOW."}
         ]
     },
     "lose":{
         "male":[
-            {
-                "text":"GUESS THE MAN STILL OWNS YOU."
-            },
-            {
-                "text":"YOU GOT WHIPPED. WANNA TRY AGAIN?"
-            },
-            {
-                "text":"THAT WAS WEAK. TRY AGAIN."
-            }
+            {"text":"GUESS THE MAN STILL OWNS YOU."},
+            {"text":"YOU GOT WHIPPED. WANNA TRY AGAIN?"},
+            {"text":"THAT WAS WEAK. TRY AGAIN."}
         ],
         "female":[
-            {
-                "text":"THAT MUST HAVE HURT 'CAUSE YOU GOT CRUSHED."
-            },
-            {
-                "text":"HOPE NO BROS SAW YOU GET BEAT BY A GIRL."
-            },
-            {
-                "text":"YOU GOT PWNED."
-            }
+            {"text":"THAT MUST HAVE HURT 'CAUSE YOU GOT CRUSHED."},
+            {"text":"HOPE NO BROS SAW YOU GET BEAT BY A GIRL."},
+            {"text":"YOU GOT PWNED."}
         ]
     }
 }

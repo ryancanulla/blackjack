@@ -79,10 +79,12 @@ blackjack.LOSE_SOUND = 'lose';
 blackjack.BACKGROUND_SOUND = 'background';
 
 blackjack.startMobile = function(){
+    var element = document.getElementById('blackjack');
     blackjack.ORIENTATION = blackjack.PORTRAIT;
     blackjack.WIDTH = 980;
     blackjack.HEIGHT = 1280;
-    blackjack.director = new lime.Director(document.body, blackjack.WIDTH, blackjack.HEIGHT);
+//    blackjack.director = new lime.Director(document.body, blackjack.WIDTH, blackjack.HEIGHT);
+    blackjack.director = new lime.Director(element, blackjack.WIDTH, blackjack.HEIGHT);
 //    blackjack.director.makeMobileWebAppCapable();
 
     blackjack.defaultTransition = null;
@@ -197,11 +199,13 @@ blackjack.goToMenuScene = function(){
     goog.events.listen(menu.playAsManButton, ['mousedown', 'touchstart'], function() {
         blackjack.playSound(blackjack.CLICK_SOUND);
         this.startGame(blackjack.MAN);
+        _gaq.push(['_trackEvent', 'Game_start', 'Click_man']);
     }, false, this);
 
     goog.events.listen(menu.playAsWomanButton, ['mousedown', 'touchstart'], function() {
         blackjack.playSound(blackjack.CLICK_SOUND);
         this.startGame(blackjack.WOMAN);
+        _gaq.push(['_trackEvent', 'Game_start', 'Click_woman']);
     }, false, this);
 
     goog.events.listen(menu.soundButton, ['mousedown', 'touchstart'], function() {
@@ -212,6 +216,8 @@ blackjack.goToMenuScene = function(){
 blackjack.startGame = function(gender){
     var game = new blackjack.BlackJackGameView(gender),
         animation = new blackjack.AnimationScreen(gender);
+
+    blackjack.player = game.player;
 
     blackjack.director.replaceScene(game, blackjack.defaultTransition, blackjack.transitionDelay);
 
@@ -243,6 +249,7 @@ blackjack.startGame = function(gender){
 
         if(game.player.inventoryItems === 0){
             this.goToGameOverScreen(false, gender);
+            _gaq.push(['_trackEvent', 'Game_plays', 'Lose']);
             return;
         }
 
@@ -274,6 +281,7 @@ blackjack.startGame = function(gender){
 
         if(isFinalAnimation){
             this.goToGameOverScreen(true, gender);
+            _gaq.push(['_trackEvent', 'Game_plays', 'Win']);
         }
         else {
             game.resetThenStart();
@@ -289,11 +297,6 @@ blackjack.goToGameOverScreen = function(isWin, gender){
     lime.scheduleManager.callAfter(function(dt){
         blackjack.director.replaceScene(screen, blackjack.defaultTransition, blackjack.transitionDelay);
     }, this, 1500);
-
-    goog.events.listen(screen.playAgainButton, ['mousedown', 'touchstart'], function() {
-        blackjack.playSound(blackjack.CLICK_SOUND);
-        this.goToMenuScene();
-    }, false, this);
 };
 
 blackjack.toggleSound = function(sound){

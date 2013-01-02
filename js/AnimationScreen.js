@@ -62,9 +62,6 @@ blackjack.AnimationScreen.prototype.createChildren = function(){
 };
 
 blackjack.AnimationScreen.prototype.setupNextAnimation = function(gender, level){
-    console.log('setting up next level: ' + level);
-    console.log(' ');
-
     if(gender === blackjack.MAN) {
         this.loseDetails = this.animationManager.manTauntsUser(level)
         this.winDetails = this.animationManager.manLosesItem(level);
@@ -89,7 +86,6 @@ blackjack.AnimationScreen.prototype.setupNextAnimation = function(gender, level)
 };
 
 blackjack.AnimationScreen.prototype.start = function(gender, action, level) {
-    console.log('game level:' + level);
     var delay=4000;
 
     if(action === blackjack.COMPUTER_LOSES_ITEM) {
@@ -108,7 +104,10 @@ blackjack.AnimationScreen.prototype.start = function(gender, action, level) {
         this.dispatchEvent(blackjack.ANIMATION_COMPLETE);
 
         lime.scheduleManager.callAfter(function(dt){
-            this.setupNextAnimation(gender, level);
+            if(level < blackjack.TOTAL_GAME_LEVELS + 1) {
+                this.setupNextAnimation(gender, level);
+            }
+
         }, this, 1000);
 
     }, this, delay);
@@ -116,37 +115,8 @@ blackjack.AnimationScreen.prototype.start = function(gender, action, level) {
 
 blackjack.AnimationScreen.prototype.updateAnimationPosition = function(gender, level) {
     if(blackjack.ORIENTATION === blackjack.LANDSCAPE) {
-        if(gender === blackjack.MAN) {
-        	/*if (level == 2) {
-	        	this.winContainer.setPosition(750, 384);
-	        }
-	        else if (level == 1) {
-	        	this.loseContainer.setPosition(750, 384);
-        	} else if(level > 4) {
-                this.winContainer.setPosition(675 , 395);
-                this.loseContainer.setPosition(675 , 395);
-            }
-            else {
-                this.winContainer.setPosition(675, 295);
-                this.loseContainer.setPosition(675, 295);
-            }*/
-            
             this.winContainer.setPosition(750, 384);
 	        this.loseContainer.setPosition(750, 384);
-        }
-        else {
-            /*if(level > 4) {
-                this.winContainer.setPosition(675 , 395);
-                this.loseContainer.setPosition(675 , 395);
-            }
-            else {
-                this.winContainer.setPosition(675, 335);
-                this.loseContainer.setPosition(675, 335);
-            }*/
-            this.winContainer.setPosition(750, 384);
-	        this.loseContainer.setPosition(750, 384);
-        }
-
     }
     else {
         if(gender === blackjack.MAN) {
