@@ -9,9 +9,7 @@ goog.require('goog.events.EventType');
 
 blackjack.Preload = function(){
     blackjack.utils.ViewportMonitor.call(this);
-
     this.createChildren();
-
 };
 
 goog.inherits(blackjack.Preload, blackjack.utils.ViewportMonitor);
@@ -38,11 +36,9 @@ blackjack.Preload.prototype.createChildren = function(){
 
     if(blackjack.ORIENTATION == blackjack.LANDSCAPE) {
         title.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT / 2);
-//        bar.setPosition(525, title.getPosition().y + 30);
     }
     else {
         title.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT / 2);
-//        bar.setPosition(375, title.getPosition().y + 30);
     }
 
     this.titleLabel = title;
@@ -54,10 +50,6 @@ blackjack.Preload.prototype.createChildren = function(){
     lime.scheduleManager.callAfter(function(dt){
         this.preload();
     }, this, 1500);
-
-
-//    var grow = new lime.animation.ScaleTo(1,1).setDuration(5);
-//    bar.runAction(grow);
 };
 
 blackjack.Preload.prototype.preload = function(){
@@ -71,7 +63,8 @@ blackjack.Preload.prototype.preload = function(){
         {url: 'assets/game/background.png'},
         {url: 'assets/game/animation/background.png'},
         {url: 'assets/game/animation/desk.png'},
-        {url: 'assets/gameOver/endScreen.png'}
+        {url: 'assets/gameOver/background.png'},
+        {url: 'assets/gameOver/bottom.png'}
     ];
 
     var imagesLandscape = [
@@ -79,7 +72,8 @@ blackjack.Preload.prototype.preload = function(){
         {url: 'assets/game/backgroundLandscape.png'},
         {url: 'assets/game/animation/backgroundLandscape.png'},
         {url: 'assets/game/animation/deskLandscape.png'},
-        {url: 'assets/gameOver/endScreenLandscape.png'}
+        {url: 'assets/gameOver/backgroundLandscape.png'},
+        {url: 'assets/gameOver/bottomLandscape.png'}
     ];
 
     var gameImgages = [
@@ -101,9 +95,7 @@ blackjack.Preload.prototype.preload = function(){
         {url: 'assets/card/deck.png'},
         {url: 'assets/card/faceUpBackground.png'},
         {url: 'assets/card/faceDownBackground.png'},
-        {url: 'assets/game/animation/chair.png'},
-        {url: 'assets/gameOver/playAgainButton.png'},
-        {url: 'assets/gameOver/playAgainButtonDown.png'}
+        {url: 'assets/game/animation/chair.png'}
     ];
 
     if(blackjack.ORIENTATION === blackjack.LANDSCAPE) {

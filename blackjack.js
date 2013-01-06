@@ -83,9 +83,7 @@ blackjack.startMobile = function(){
     blackjack.ORIENTATION = blackjack.PORTRAIT;
     blackjack.WIDTH = 980;
     blackjack.HEIGHT = 1280;
-//    blackjack.director = new lime.Director(document.body, blackjack.WIDTH, blackjack.HEIGHT);
     blackjack.director = new lime.Director(element, blackjack.WIDTH, blackjack.HEIGHT);
-//    blackjack.director.makeMobileWebAppCapable();
 
     blackjack.defaultTransition = null;
     blackjack.transitionDelay = 1;
@@ -188,7 +186,8 @@ blackjack.showPreloader = function(){
 
     goog.events.listen(preloadScene, 'complete', function() {
         blackjack.playSound(blackjack.BACKGROUND_SOUND);
-        blackjack.goToMenuScene();
+//        blackjack.goToMenuScene();
+        this.goToGameOverScreen(blackjack.WIN, blackjack.MAN);
     }, false, this);
 };
 
