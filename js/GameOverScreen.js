@@ -2,8 +2,11 @@ goog.provide('blackjack.GameOverScreen');
 
 goog.require('blackjack.utils.ViewportMonitor');
 
-blackjack.GameOverScreen = function(win, gender){
+blackjack.GameOverScreen = function(win, gender, level){
     blackjack.utils.ViewportMonitor.call(this);
+
+    var genderPath,
+        levelPath;
 
     this.createMessages();
 
@@ -13,6 +16,23 @@ blackjack.GameOverScreen = function(win, gender){
 
     var bottom = new lime.Sprite();
     bottom.setAnchorPoint(0,1);
+
+    if(gender === blackjack.MAN) {
+        genderPath = 'man';
+    }
+    else {
+        genderPath = 'woman';
+    }
+
+    if(win) {
+        levelPath = ('win.png').toString();
+    }
+    else {
+        levelPath = ('img' + level + '.png').toString();
+    }
+
+    var person = new lime.Sprite();
+    person.setFill('assets/gameOver/' + genderPath + '/' + levelPath);
 
     this.topLabel = new lime.Label();
     this.topLabel.setFontSize(60);
@@ -35,6 +55,9 @@ blackjack.GameOverScreen = function(win, gender){
         bottom.setSize(blackjack.WIDTH, 400);
         bottom.setPosition(0, blackjack.HEIGHT + 10);
 
+        person.setScale(2);
+        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.45);
+
         this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 225);
         this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 155);
         this.setMessage(win, gender);
@@ -46,12 +69,16 @@ blackjack.GameOverScreen = function(win, gender){
         bottom.setSize(blackjack.WIDTH, 500);
         bottom.setPosition(0, blackjack.HEIGHT + 10);
 
+        person.setScale(2.5);
+        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.45);
+
         this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 325);
         this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 220)
         this.setMessage(win, gender);
     }
 
     this.appendChild(background);
+    this.appendChild(person);
     this.appendChild(bottom);
     this.appendChild(this.topLabel);
     this.appendChild(this.bottomLabel);

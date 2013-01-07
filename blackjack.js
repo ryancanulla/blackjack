@@ -176,7 +176,6 @@ blackjack.createSoundManager = function(){
             });
         }
     });
-
     soundManager.debugMode = false;
 };
 
@@ -186,8 +185,7 @@ blackjack.showPreloader = function(){
 
     goog.events.listen(preloadScene, 'complete', function() {
         blackjack.playSound(blackjack.BACKGROUND_SOUND);
-//        blackjack.goToMenuScene();
-        this.goToGameOverScreen(blackjack.WIN, blackjack.MAN);
+        blackjack.goToMenuScene();
     }, false, this);
 };
 
@@ -247,7 +245,7 @@ blackjack.startGame = function(gender){
         console.log('player loss');
 
         if(game.player.inventoryItems === 0){
-            this.goToGameOverScreen(false, gender);
+            this.goToGameOverScreen(false, gender, game.player.level);
             _gaq.push(['_trackEvent', 'Game_plays', 'Lose']);
             return;
         }
@@ -279,7 +277,7 @@ blackjack.startGame = function(gender){
         var isFinalAnimation = game.player.level > blackjack.TOTAL_GAME_LEVELS;
 
         if(isFinalAnimation){
-            this.goToGameOverScreen(true, gender);
+            this.goToGameOverScreen(true, gender, game.player.level);
             _gaq.push(['_trackEvent', 'Game_plays', 'Win']);
         }
         else {
@@ -290,8 +288,8 @@ blackjack.startGame = function(gender){
     }, false, this);
 };
 
-blackjack.goToGameOverScreen = function(isWin, gender){
-    var screen = new blackjack.GameOverScreen(isWin, gender);
+blackjack.goToGameOverScreen = function(isWin, gender, level){
+    var screen = new blackjack.GameOverScreen(isWin, gender, level);
 
     lime.scheduleManager.callAfter(function(dt){
         blackjack.director.replaceScene(screen, blackjack.defaultTransition, blackjack.transitionDelay);
