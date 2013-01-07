@@ -196,13 +196,14 @@ blackjack.goToMenuScene = function(){
     goog.events.listen(menu.playAsManButton, ['mousedown', 'touchstart'], function() {
         blackjack.playSound(blackjack.CLICK_SOUND);
         this.startGame(blackjack.MAN);
-        _gaq.push(['_trackEvent', 'Game_start', 'Click_man']);
+        this.trackEvent('Game_start', 'Click_man');
     }, false, this);
 
     goog.events.listen(menu.playAsWomanButton, ['mousedown', 'touchstart'], function() {
         blackjack.playSound(blackjack.CLICK_SOUND);
         this.startGame(blackjack.WOMAN);
-        _gaq.push(['_trackEvent', 'Game_start', 'Click_woman']);
+        this.trackEvent('Game_start', 'Click_woman');
+
     }, false, this);
 
     goog.events.listen(menu.soundButton, ['mousedown', 'touchstart'], function() {
@@ -222,12 +223,6 @@ blackjack.startGame = function(gender){
     *   Handle Win
     */
     goog.events.listen(game, blackjack.PLAYER_WINS, function() {
-        console.log(' ');
-        console.log('Player Win: ');
-        console.log('Chips Left: ' + game.player.inventoryItems);
-        console.log('Level: ' + game.level);
-        console.log(' ');
-
         if(game.computer.gender === blackjack.MAN) {
             animation.start(blackjack.MAN, blackjack.COMPUTER_LOSES_ITEM, game.player.level);
         }
@@ -242,11 +237,10 @@ blackjack.startGame = function(gender){
      *   Handle Loss
      */
     goog.events.listen(game, blackjack.PLAYER_LOSES, function() {
-        console.log('player loss');
 
         if(game.player.inventoryItems === 0){
             this.goToGameOverScreen(false, gender, game.player.level);
-            _gaq.push(['_trackEvent', 'Game_plays', 'Lose']);
+            this.trackEvent('Game_plays', 'Lose');
             return;
         }
 
@@ -272,13 +266,11 @@ blackjack.startGame = function(gender){
      *   Handle Animation Complete
      */
     goog.events.listen(animation, blackjack.ANIMATION_COMPLETE, function() {
-        console.log('Animation Complete.');
-
         var isFinalAnimation = game.player.level > blackjack.TOTAL_GAME_LEVELS;
 
         if(isFinalAnimation){
             this.goToGameOverScreen(true, gender, game.player.level);
-            _gaq.push(['_trackEvent', 'Game_plays', 'Win']);
+            this.trackEvent('Game_plays', 'Win');
         }
         else {
             game.resetThenStart();
@@ -312,6 +304,15 @@ blackjack.playSound = function(sound){
         return;
     }
     soundManager.play(sound);
+}
+
+blackjack.trackEvent = function(group, type){
+    try {
+        _gaq.push(['_trackEvent', group, type]);
+    }
+    catch (e){
+        console.log('tracking error: ' + e);
+    }
 }
 
 goog.exportSymbol('blackjack.start', blackjack.start);
