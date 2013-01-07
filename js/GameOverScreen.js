@@ -55,8 +55,8 @@ blackjack.GameOverScreen = function(win, gender, level){
         bottom.setSize(blackjack.WIDTH, 400);
         bottom.setPosition(0, blackjack.HEIGHT + 10);
 
-        person.setScale(2);
-        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.45);
+        person.setScale(1.4);
+        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.5);
 
         this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 225);
         this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 155);
@@ -69,8 +69,8 @@ blackjack.GameOverScreen = function(win, gender, level){
         bottom.setSize(blackjack.WIDTH, 500);
         bottom.setPosition(0, blackjack.HEIGHT + 10);
 
-        person.setScale(2.5);
-        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.45);
+        person.setScale(1.75);
+        person.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT *.5);
 
         this.topLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 325);
         this.bottomLabel.setPosition(blackjack.WIDTH / 2, blackjack.HEIGHT - 220)
@@ -84,7 +84,12 @@ blackjack.GameOverScreen = function(win, gender, level){
     this.appendChild(this.bottomLabel);
 
     lime.scheduleManager.callAfter(function(dt){
-        parent.BlackjackOverlay.showForm();
+        try {
+            parent.BlackjackOverlay.showForm();
+        }
+        catch (e) {
+
+        }
     }, this, 6000);
 };
 
