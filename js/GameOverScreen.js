@@ -86,6 +86,7 @@ blackjack.GameOverScreen = function(win, gender, level){
     lime.scheduleManager.callAfter(function(dt){
         try {
             parent.BlackjackOverlay.showForm();
+            soundManager.stopAll();
         }
         catch (e) {
 

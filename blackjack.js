@@ -315,4 +315,8 @@ blackjack.trackEvent = function(group, type){
     }
 }
 
+blackjack.resetSound = function(){
+    blackjack.playSound(blackjack.BACKGROUND_SOUND);
+}
+
 goog.exportSymbol('blackjack.start', blackjack.start);
