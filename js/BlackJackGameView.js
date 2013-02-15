@@ -69,6 +69,14 @@ blackjack.BlackJackGameView.prototype.createChildren = function () {
     this.computerTotal.setFontSize(100);
     this.computerTotal.setFontColor('#88d52f');
     this.computerTotal.setFontFamily('Gotham');
+
+
+    if(goog.userAgent.IE) {
+        this.computerTotal.setFontFamily('Arial');
+        this.computerTotal.setFontSize(80);
+        this.computerTotal.setFontWeight('bold');
+    }
+
     this.computerTotal.setText('');
 
     this.youLabel = new lime.Label();
@@ -84,6 +92,13 @@ blackjack.BlackJackGameView.prototype.createChildren = function () {
     this.youTotal.setFontSize(100);
     this.youTotal.setFontColor('#88d52f');
     this.youTotal.setFontFamily('Gotham');
+
+    if(goog.userAgent.IE) {
+        this.youTotal.setFontFamily('Arial');
+        this.youTotal.setFontSize(80);
+        this.youTotal.setFontWeight('bold');
+    }
+
     this.youTotal.setText('');
 
     this.inventory = new blackjack.Inventory(this.player.inventoryItems);
@@ -99,6 +114,12 @@ blackjack.BlackJackGameView.prototype.createChildren = function () {
     this.winIncicator.setAnchorPoint(0, .5);
     this.winIncicator.setFontColor('#88d52f');
     this.winIncicator.setFontFamily('Gotham');
+
+    if(goog.userAgent.IE) {
+        this.winIncicator.setFontFamily('Arial');
+        this.winIncicator.setFontWeight('bold');
+    }
+
     this.winIncicator.setFontWeight('bold');
     this.winIncicator.setSize(500, 50);
     this.winIncicator.setText('');
@@ -346,11 +367,11 @@ blackjack.BlackJackGameView.prototype.updateCardLayout = function (person) {
 
 blackjack.BlackJackGame.prototype.showComputersCards = function () {
     var length = this.cards.length,
-        i = 0,
+        i,
         card;
 
     // handle UI cards
-    for (i; i < length; i += 1) {
+    for (i=0; i < length; i += 1) {
         card = this.cards[i];
         if (card.isFaceUp === false) {
             card.turnOverCard();

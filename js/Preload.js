@@ -25,6 +25,7 @@ blackjack.Preload.prototype.createChildren = function(){
 
     title.setText('LOADING');
     title.setFontColor('#FFFFFF');
+    title.setFontFamily('Arial');
     title.setFontSize(48);
     title.setAnchorPoint(.5,.5);
     title.setSize(400,50);

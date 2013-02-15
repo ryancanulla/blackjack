@@ -225,6 +225,7 @@ blackjack.startGame = function(gender){
     goog.events.listen(game, blackjack.PLAYER_WINS, function() {
         if(game.computer.gender === blackjack.MAN) {
             animation.start(blackjack.MAN, blackjack.COMPUTER_LOSES_ITEM, game.player.level);
+
         }
         else {
             animation.start(blackjack.WOMAN, blackjack.COMPUTER_LOSES_ITEM, game.player.level);

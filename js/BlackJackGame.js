@@ -86,12 +86,12 @@ blackjack.BlackJackGame.prototype.checkForBlackJack = function(){
 blackjack.BlackJackGame.prototype.hasBlackJack = function(person){
     var cards = person.currentHand,
         length = cards.length,
-        i = 0 ,
+        i,
         card,
         hasAce,
         hasFaceCard;
 
-    for(i; i<length; i+=1) {
+    for(i=0; i<length; i+=1) {
         card = cards[i];
 
         if(card.value === 10 && card.hasBeenDealt) {
@@ -117,11 +117,11 @@ blackjack.BlackJackGame.prototype.getHandTotal = function(person){
     var cards = person.currentHand,
         aces = [],
         length = cards.length,
-        i = 0,
+        i,
         card,
         total = 0;
 
-    for(i; i < length; i+=1) {
+    for(i=0; i < length; i+=1) {
         card = cards[i];
 
         if(card.isFaceUp && card.hasBeenDealt) {
@@ -134,11 +134,10 @@ blackjack.BlackJackGame.prototype.getHandTotal = function(person){
         }
     }
 
-    i=0;
     length = aces.length;
 
     if(length > 0) {
-        for(i; i<length; i+=1) {
+        for(i=0; i<length; i+=1) {
             if((total + 11) > 21) {
                 total += 1;
             }
@@ -294,6 +293,7 @@ blackjack.BlackJackGame.prototype.handleBust = function(){
 }
 
 blackjack.BlackJackGame.prototype.push = function(){
+    blackjack.trackEvent("Hand_Complete_PUSH","Completed");
     lime.scheduleManager.callAfter(function(dt){
         this.resetThenStart();
     }, this, blackjack.WIN_DELAY);
@@ -308,6 +308,7 @@ blackjack.BlackJackGame.prototype.computerLoses = function(){
 };
 
 blackjack.BlackJackGame.prototype.playerWins = function(){
+    blackjack.trackEvent("Hand_Complete_WIN","Completed");
     blackjack.playSound(blackjack.WIN_SOUND);
     this.player.level +=1;
     this.handOver = true;
@@ -325,6 +326,7 @@ blackjack.BlackJackGame.prototype.playerWins = function(){
 blackjack.BlackJackGame.prototype.playerLoses = function(){
     this.computer.level +=1;
     this.playerChipUsed();
+    blackjack.trackEvent("Hand_Complete_LOSE","Completed");
     blackjack.playSound(blackjack.LOSE_SOUND);
     this.handOver = true;
 

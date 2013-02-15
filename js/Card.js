@@ -34,13 +34,25 @@ blackjack.Card.prototype.createChildren = function(){
     number.setFontFamily('Rock');
     number.setFontWeight('bold');
 
+    if(goog.userAgent.IE) {
+        number.setFontFamily('Arial');
+    }
+
     if(this.cardDetails.card === blackjack.JACK) {
         number.setFontSize(70);
         number.setPosition(66, 50);
+
+        if(goog.userAgent.IE) {
+            number.setPosition(66, 45);
+        }
     }
     else {
         number.setFontSize(80);
         number.setPosition(66, 57);
+
+        if(goog.userAgent.IE) {
+            number.setPosition(66, 50);
+        }
     }
 
     number.setText(this.number);
