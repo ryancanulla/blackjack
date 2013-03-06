@@ -66,17 +66,26 @@
             {
                 "url":"assets/game/animation/man-hd/lose/maleLose1_2000.gif",
                 "time":3000,
-                "level":1
+                "level":1,
+                "flash":{
+                	"url":"assets/game/boxanim.swf"
+                }
             },
             {
                 "url":"assets/game/animation/man-hd/lose/maleLose1_3000.gif",
                 "time":4000,
-                "level":1
+                "level":1,
+                "flash":{
+                	"url":"assets/game/boxanim.swf"
+                }
             },
             {
                 "url":"assets/game/animation/man-hd/lose/maleLose1_4000.gif",
                 "time":5000,
-                "level":1
+                "level":1,
+                "flash":{
+                	"url":"assets/game/boxanim.swf"
+                }
             },
             {
                 "url":"assets/game/animation/man-hd/lose/maleLose2_2000.gif",

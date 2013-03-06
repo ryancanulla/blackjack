@@ -19,7 +19,15 @@ goog.require('lime.transitions.SlideInRight');
 goog.require('lime.transitions.SlideInLeft');
 goog.require('lime.transitions.MoveInRight');
 
+if (!window.console) window.console = {};
+if (!window.console.log) window.console.log = function(s) {
+	if (goog.dom.getElement("debug") && blackjack.DEBUG) {
+		goog.dom.getElement("debug").innerHTML += "<br/>"+s;
+	}
+};
+
 blackjack.soundOn = true;
+blackjack.DEBUG = true;
 
 blackjack.ORIENTATION = '';
 blackjack.PORTRAIT = 'portrait';
@@ -244,6 +252,8 @@ blackjack.startGame = function(gender){
             this.trackEvent('Game_plays', 'Lose');
             return;
         }
+        
+        goog.dom.getElement('debug').innerHTML += "<br/>PLAYER LOSES event";
 
         // if the playe has a taunt, then play it
         if(animation.hasTauntForLevel(game.player.level, gender)) {
